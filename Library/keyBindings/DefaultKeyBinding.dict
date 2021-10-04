@@ -1,0 +1,7 @@
+{
+    "\UF729"   = "moveToBeginningOfParagraph:"; // home
+    "\UF72B"   = "moveToEndOfParagraph:"; // end
+    "^\UF702"  = "moveWordBackward:";                            /* Cmd  + LeftArrow */
+    "^\UF703"  = "moveWordForward:";                             /* Cmd  + RightArrow */
+    "^$\UF703" = ("moveWordForwardAndModifySelection:", "moveWordForwardAndModifySelection:", "moveWordBackwardAndModifySelection:");
+}
