@@ -98,7 +98,7 @@ let mapleader=","
 " Emmet
 let g:user_emmet_leader_key=','
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+autocmd FileType html,css,javascript EmmetInstall
 
 " Toggle relative number lines
 "nnoremap <C-n> :call NumberToggle()<CR>
@@ -164,12 +164,12 @@ endif
 " colorscheme onedark
 " colorscheme atom-dark
 syntax enable
-set background=dark
+set background=light
 let g:solarized_termcolors=256      " use solarized 256 fallback
 colorscheme solarized8
 
 " Set Vim-Airline Theme
-" let g:airline_theme="onedark"
+let g:airline_theme="solarized"
 
 " ======================================================================
 " VUNDLE PLUGINS
@@ -187,6 +187,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'mattn/emmet-vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'elixir-editors/vim-elixir'
@@ -209,6 +210,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 
 " Ruby
 Plugin 'ngmy/vim-rubocop'
+Plugin 'vim-ruby/vim-ruby'
 
 " Syntastic Linting
 Plugin 'scrooloose/syntastic'
@@ -221,6 +223,13 @@ Plugin 'gabrielelana/vim-markdown'
 
 " Solarized Dark
 Plugin 'lifepillar/vim-solarized8'
+
+" Vim+Rspec+Tmux
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'jgdavey/tslime.vim'
+
+" Prettier
+Plugin 'prettier/vim-prettier'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -304,12 +313,20 @@ nmap <Leader>r :Tags<CR>
 " -------- fzf stuff -------------
 
 " Move between tabs
-nmap <C-S-right> :tabnext<CR>
-nmap <C-S-left> :tabprevious<CR>
+nmap <C-PageDown> :tabnext<CR>
+nmap <C-PageUp> :tabprevious<CR>
 
 " Make double-<Esc> clear search highlights
 " nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 
 " Map ctrl s to save https://stackoverflow.com/questions/3446320/in-vim-how-to-map-save-to-ctrl-s
-:nmap <c-s> :w<CR>
-:imap <c-s> <Esc>:w<CR>
+":nmap <c-s> :w<CR>
+":imap <c-s> <Esc>:w<CR>
+
+" Vim rspec tmux
+let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
+" vim-rspec mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
