@@ -143,7 +143,7 @@ set statusline+=\ [line/col\ %l,%v]
 set enc=utf-8
 
 " Set 256 color support
-set t_Co=256
+" set t_Co=256
 " set term=screen-256color
 " let $TERM='screen-256color'
 " let &t_AB="\e[48;5;%dm"
@@ -152,12 +152,12 @@ set t_Co=256
 " Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 if (has("nvim"))
   " For Neovim 0.1.3 and 0.1.4
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  "let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 endif
 
 " Enable true color 启用终端24位色
 if exists('+termguicolors')
-  set termguicolors
+  :set termguicolors
 endif
 
 " Set Theme
@@ -165,7 +165,7 @@ endif
 " colorscheme atom-dark
 syntax enable
 set background=light
-let g:solarized_termcolors=256      " use solarized 256 fallback
+"let g:solarized_termcolors=256      " use solarized 256 fallback
 colorscheme solarized8
 
 " Set Vim-Airline Theme
