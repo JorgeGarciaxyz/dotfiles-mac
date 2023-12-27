@@ -163,8 +163,10 @@ endif
 " Set Theme
 " colorscheme onedark
 " colorscheme atom-dark
+filetype plugin indent on
+syntax on
 syntax enable
-set background=light
+set background=dark
 "let g:solarized_termcolors=256      " use solarized 256 fallback
 colorscheme solarized8
 
