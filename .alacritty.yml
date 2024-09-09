@@ -3,3 +3,5 @@ import:
     - ~/shell.yaml
 font:
   size: 12
+window:
+    decorations: "none"
