@@ -1,5 +1,5 @@
 import:
-    - ~/.alacritty-colorscheme/themes/solarized_light.yaml
+    - ~/.alacritty-colorscheme/themes/solarized_dark.yaml
     - ~/shell.yaml
 font:
   size: 12
