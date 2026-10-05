@@ -21,11 +21,13 @@ style = "Regular"
 [keyboard]
 bindings = [
     { key = "PageUp", mods = "Control", action = "ReceiveChar" },
-    { key = "PageDown", mods = "Control", action = "ReceiveChar" }
+    { key = "PageDown", mods = "Control", action = "ReceiveChar" },
+    { key = "Space", mods = "Shift", mode = "~Search", action = "ToggleViMode" }
 ]
 
 [general]
 import = [
+  # "~/.config/alacritty/themes/themes/solarized_dark.toml"
     "~/.config/alacritty/themes/themes/solarized_light.toml"
 ]
 

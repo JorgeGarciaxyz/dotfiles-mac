@@ -66,4 +66,4 @@ yabai -m rule --add app='Goland IDEA' title='Edit configuration' manage=off
 
 echo "yabai configuration loaded.."
 
-borders active_color=0xe0fe8019 inactive_color=0xe01d2021 width=5.0 &
+# borders active_color=0xe0fe8019 inactive_color=0xe01d2021 width=1.0 &
